@@ -18,6 +18,13 @@ console.log(' ');
 console.log("   <<<Ppu Sum>>>");
 console.log(ppuSum());
 
+
+console.log(' ');
+console.log("   <<<Ppu Average>>>");
+console.log(ppuAverage());
+
+
+
 function toppingTypes() {
 	var toppingTypes = [];
 	var index = 0;
@@ -47,4 +54,10 @@ function ppuSum() {
 			ppuSum+=hw[i].ppu;	 
 	}
 	return ppuSum;
+}
+
+function ppuAverage() {
+	var ppuAverage = ppuSum()/hw.length ;
+	
+	return ppuAverage;
 }
