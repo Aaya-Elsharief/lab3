@@ -8,6 +8,12 @@ console.log("   <<<All topping types>>>");
 console.log(toppingTypes());
 
 
+console.log(' ');
+console.log("   <<<All batter types>>>");
+console.log(batterTypes());
+
+
+
 function toppingTypes() {
 	var toppingTypes = [];
 	var index = 0;
@@ -17,4 +23,17 @@ function toppingTypes() {
 	}	 
 	}
 	return toppingTypes;
+}
+
+
+
+function batterTypes() {
+	var batterTypes = [];
+	var index = 0;
+	for (let i=0 ; i< hw.length ; i++){
+	    for (let j=0 ; j<hw[i].batters.batter.length ; j++){
+			batterTypes[index++]=hw[i].batters.batter[j].type;		
+	}	 
+	}
+		return batterTypes;
 }
