@@ -14,6 +14,17 @@ console.log(batterTypes());
 
 
 
+console.log(' ');
+console.log("   <<<Ppu Sum>>>");
+console.log(ppuSum());
+
+
+console.log(' ');
+console.log("   <<<Ppu Average>>>");
+console.log(ppuAverage());
+
+
+
 function toppingTypes() {
 	var toppingTypes = [];
 	var index = 0;
@@ -25,8 +36,6 @@ function toppingTypes() {
 	return toppingTypes;
 }
 
-
-
 function batterTypes() {
 	var batterTypes = [];
 	var index = 0;
@@ -36,4 +45,19 @@ function batterTypes() {
 	}	 
 	}
 		return batterTypes;
+}
+
+
+function ppuSum() {
+	var ppuSum = 0;
+	for (let i=0 ; i< hw.length ; i++){
+			ppuSum+=hw[i].ppu;	 
+	}
+	return ppuSum;
+}
+
+function ppuAverage() {
+	var ppuAverage = ppuSum()/hw.length ;
+	
+	return ppuAverage;
 }
