@@ -24,6 +24,9 @@ console.log("   <<<Ppu Average>>>");
 console.log(ppuAverage());
 
 
+console.log(' ');
+console.log("   <<<All IDs regardless to the type>>>");
+console.log(allIDs());
 
 function toppingTypes() {
 	var toppingTypes = [];
@@ -47,7 +50,6 @@ function batterTypes() {
 		return batterTypes;
 }
 
-
 function ppuSum() {
 	var ppuSum = 0;
 	for (let i=0 ; i< hw.length ; i++){
@@ -60,4 +62,22 @@ function ppuAverage() {
 	var ppuAverage = ppuSum()/hw.length ;
 	
 	return ppuAverage;
+}
+
+
+function allIDs() {
+	var allIDs = [];
+	var index = 0;
+	for (let i=0 ; i< hw.length ; i++){
+		allIDs[index++]=hw[i].id;
+	    for (let j=0 ; j<hw[i].topping.length ; j++){
+			allIDs[index++]=hw[i].topping[j].id;
+	}	
+		  for (let k=0 ; k<hw[i].batters.batter.length  ; k++){
+			allIDs[index++]=hw[i].batters.batter[k].id;
+	}	
+		
+	}
+	//console.log(allIDs.length);
+	return allIDs;
 }
